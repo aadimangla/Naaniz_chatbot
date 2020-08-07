@@ -1,0 +1,36 @@
+intents:
+  - greet
+  - name_entry
+  - email_entry
+  - contact_entry
+
+entities:
+  - name
+  - email
+  - phone
+
+slots:
+  name:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  phone:
+    type: unfeaturized
+
+responses:
+  utter_ask_name:
+    - text: "Enter your name!"
+  utter_ask_email:
+    - text: "Enter your email!"
+  utter_ask_phone:
+    - text: "What is your phone number?"
+  utter_info:
+    - text: "{name} {email}  {phone} "
+
+forms:
+  - info_form
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
